@@ -1,28 +1,40 @@
-    function sukiKocak() {
-      var nama = document
-        .forms["negro"]["nama"].value;
-       const khodam = [
-         'Amba',
-         'gojo satoru',
-         'kuda negro',
-         'laba laba sunda',
-         'Daffa',
-         'MewingWotabul',
-         'Sukiliar' ,
-         'Shiroko Bugil' ,
-         'Botol kecap' ,
-         'Atmosfer Bumi' ,
-         'Jawa suki' ,
-         'Rahmat Fushiguro' ,
-         'Mas Herman Penjaga Toleransi Beragama' ,
-         'Jamin merdu' 
-         ];
-       const arr = khodam[Math.floor(Math.random() * khodam.length)];
-      if (nama !== "") {
-        alert(`Nama: ${nama}
-Khodam: ${arr}`);
-        return false; 
+    function cekKhodam(event) {
+      event.preventDefault();
+
+      let name = $('#nama').val();
+      if (name === "") {
+        alert("NAMANYA DIISI WOI!!");
+      } else {
+        const status = ["isi", "kosong"];
+        const randomStatus = Math.floor(Math.random() * status.length);
+
+        if (randomStatus === 0) {
+          const khodam = [
+            'Amba',
+            'Gojo Satoru',
+            'Kuda Negro',
+            'Laba Laba Sunda',
+            'Daffa',
+            'Mewing Wotabul',
+            'Sukiliar',
+            'Shiroko Bugil',
+            'Botol Kecap',
+            'Atmosfer Bumi',
+            'Jawa Suki',
+            'Rahmat Fushiguro',
+            'Mas Herman Penjaga Toleransi Beragama',
+            'Jamin Merdu'
+          ];
+          const randomKhodam = Math.floor(Math.random() * khodam.length);
+          $('#result').html(`${name.toUpperCase()} • ${khodam[randomKhodam].toUpperCase()}`);
+        } else {
+          $('#result').html(`${name.toUpperCase()} • KOSONG 😂`);
+        }
+
+        $('#nama').val('');
       }
-      alert("Nama harus diisi kocak");
-      return false;
     }
+
+    $(document).ready(function() {
+      $('#btnNama').click(cekKhodam);
+    });
