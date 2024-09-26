@@ -1,0 +1,75 @@
+*, html {
+    padding: 0;
+    margin: 0;
+  }
+    
+  
+  nav {
+    background-color:#181C14;
+    color: white;
+    padding: 0;
+    margin:0;
+    
+  }
+  
+  body {
+    background-color: #697565;
+  }
+  
+  h2 {
+    font-size:200%;
+    color: black;
+    font-family: fantasy;
+    
+  }
+  
+  input {
+    background-color: white;
+  }
+  
+  p {
+    text-align: center;
+    font-size: 50px;
+    font-family: cursive;
+  }
+  
+  .isi {
+    background-color: #3C3D37;
+    padding-top: 70px;
+    margin-left: 50px;
+    margin-right:50px;
+    padding-bottom: 70px;
+    margin-top: 100px;
+  }
+  
+ 
+button {
+  padding: 17px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+
+button:hover {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+  text-decoration: none;
+}
+
+button:active {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
