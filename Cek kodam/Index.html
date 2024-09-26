@@ -6,7 +6,9 @@
     function sukiKocak() {
       var nama = document
         .forms["negro"]["nama"].value;
-       const khodam = ['amba', 'gojo satoru', 'kuda negro', 'laba laba sunda', 'Daffa'];
+       const khodam = [
+         'amba', 'gojo satoru', 'kuda negro', 'laba laba sunda', 'Daffa', 'MewingWotabul', 'Sukiliar'
+         ];
        const arr = khodam[Math.floor(Math.random() * khodam.length)];
       if (nama !== "") {
         alert(`Nama: ${nama}
@@ -19,18 +21,22 @@ Khodam: ${arr}`);
   </script>
 </head>
 <style>
-  html {
+  *, html {
     padding: 0;
     margin: 0;
-    
   }
+    
+  
   nav {
-    background-color: black;
+    background-color:#181C14;
     color: white;
+    padding: 0;
+    margin:0;
+    
   }
   
   body {
-    background-color: gray;
+    background-color: #697565;
   }
   
   h2 {
@@ -44,18 +50,68 @@ Khodam: ${arr}`);
     background-color: white;
   }
   
+  p {
+    text-align: center;
+    font-size: 50px;
+    font-family: cursive;
+  }
   
+  .isi {
+    background-color: #3C3D37;
+    padding-top: 70px;
+    margin-left: 50px;
+    margin-right:50px;
+    padding-bottom: 70px;
+    margin-top: 100px;
+  }
+  
+ 
+button {
+  padding: 17px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+
+button:hover {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+  text-decoration: none;
+}
+
+button:active {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
 </style>
 <body>
   <nav>
-   
+   <p>CEK KODAM</p>
   </nav>
-  <h2 align="center">Cek Khodam</h2>
+  <br><br>
+  <div class="isi">
+    
   <form name="negro" onsubmit="return sukiKocak()" method="post">
     <div style="text-align: center">
       <input type="text" name="nama" placeholder="Masukan Nama"> <br><br>
       <button type="submit">Kirim</button>
     </div>
   </form>
+    
+  </div>
 </body>
-  </html>
+</html>
