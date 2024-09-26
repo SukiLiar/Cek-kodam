@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cek Khodam</title>
+  <script>
+    function sukiKocak() {
+      var nama = document
+        .forms["negro"]["nama"].value;
+       const khodam = ['amba', 'gojo satoru', 'kuda negro', 'laba laba sunda', 'Daffa'];
+       const arr = khodam[Math.floor(Math.random() * khodam.length)];
+      if (nama !== "") {
+        alert(`Nama: ${nama}
+Khodam: ${arr}`);
+        return false; 
+      }
+      alert("Nama harus diisi kocak");
+      return false;
+    }
+  </script>
+</head>
+<style>
+  html {
+    padding: 0;
+    margin: 0;
+    
+  }
+  nav {
+    background-color: black;
+    color: white;
+  }
+  
+  body {
+    background-color: gray;
+  }
+  
+  h2 {
+    font-size:200%;
+    color: black;
+    font-family: fantasy;
+    
+  }
+  
+  input {
+    background-color: white;
+  }
+  
+  
+</style>
+<body>
+  <nav>
+   
+  </nav>
+  <h2 align="center">Cek Khodam</h2>
+  <form name="negro" onsubmit="return sukiKocak()" method="post">
+    <div style="text-align: center">
+      <input type="text" name="nama" placeholder="Masukan Nama"> <br><br>
+      <button type="submit">Kirim</button>
+    </div>
+  </form>
+</body>
+  </html>
