@@ -2,30 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cek Khodam</title>
-  <link rel="stylesheet" href="./assets/style.css">
-  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML</title>
+  <link rel="stylesheet" href="style.css">
+  
 </head>
+
 <body>
-  
-  <div class="container">
-    <div class="header">
-      <h1>Cek Khodam</h1>
-      <div class="hasil">
-        <p id="result">NAMA • KHODAM LU</p>
+  <h2>CEK KHODAM ANDA</h2>
+
+  <div class="isi">
+    <form id="khodamForm" onsubmit="return suki()">
+      <input type="text" id="namaLengkap" name="namaLengkap" class="input" placeholder="Isi nama"><br><br>
+      
+      <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="closePopup()">&times;</div>
+          <br>
+          <h1>SELAMAT ✨</h1>
+          <p id="nama"></p>
+        </div>
       </div>
-      <p>Cek khodam kamu sekarang!! dijamin merdu</p>
-      <div class="nama">
-        <form action="">
-          <input type="text" id="nama">
-          <button id="btnNama" type="button">Gasken</button>
-        </form>
-      </div>
-    </div>
+
+      <button type="submit">
+        <span>Cek Sekarang</span>
+      </button>
+    </form>
   </div>
-  
-  <script src="./assets/cekkodam.js"></script>
+
+  <script src="main.js"></script>
 </body>
 </html>
