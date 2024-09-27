@@ -161,7 +161,6 @@ waktu.innerHTML = `<p>${hari} ${tanggal} ${bulan} ${tahun}<br>
     function suki() {
       const nama = document.getElementById('namaLengkap').value;
       if (!nama) {
-        alert("NAMA LU BELUM DIISI KOCAK 😂");
         return false;
       }
 
